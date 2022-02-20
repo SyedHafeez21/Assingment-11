@@ -1,0 +1,167 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    display: flex;
+    background: linear-gradient(to right #373B44 , #4286f4 );
+   
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.container{
+    margin-left: 20%;
+    margin-right: 20%;
+    background-color: white;
+    width: 100%;
+    padding: 25px 30px;
+    border-radius: 20px;
+}
+span{
+    display: block;
+    font-size: 25px;
+    padding: 10px;
+    font-weight: 500;
+}
+.heading{
+     text-align: center;
+     padding-bottom: 40px;
+     font-size: 150%;
+     background-image: linear-gradient(to right ,#a16c0a , #ff3c00 );
+     background-clip: text;
+     background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+
+}
+input{
+    font-size: 20px;
+    width: 80%;
+    padding-left: 10px;
+    padding-top: 8px;
+    border: none;
+    border-bottom: orange solid 3px;
+    background-color: rgb(243, 243, 243);
+    border-radius: 10px;
+    outline: none;
+    transition: all 0.5s;
+}
+input:focus{
+    border: orange solid 3px;
+}       
+input:valid{
+    border-color: #ffa500;
+    border: solid 3px;
+}
+.radi{
+    display: flex;
+    position: relative;
+}
+.radi input{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.check{
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(179, 179, 179);
+    border-radius: 50% ;
+}
+.radi:hover input ~ .check{
+    background-color: rgb(141, 141, 141);
+    cursor: pointer;
+}
+.radi input:checked ~ .check{
+    background-color: rgb(255, 187, 0);
+}
+
+.check::after{
+    content: "";
+    position: absolute;
+    display: none;
+}
+.radi input:checked ~ .check::after {
+    display: block;
+}
+.radi .check::after {
+    top: 6px;
+    left: 5.5px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: rgb(3, 0, 0);
+}
+.birthdate input{
+    width: 40%;
+    border: orange solid 2px;
+    transition: all 0.5s;
+    text-transform: uppercase;
+}
+.birthdate input:focus{
+    width: 40%;
+    border: orange solid 2px;
+    background-color: orange;
+    color: white;
+}
+.sub{
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.sub button{
+    padding: 10px 50px;
+    font-size: 30px;
+    color: white;
+    background: linear-gradient(to top ,#C02425 , #F0CB35 );
+    border-radius: 10px;
+    border: none;
+    transition: 0.5s all;
+}
+.sub button i{
+    color: white;
+}
+.sub button:hover{
+    background: linear-gradient(to bottom ,#C02425 , #F0CB35 );
+    
+}
+.form2 i{
+    color: rgb(231, 150, 0);
+}
+.para{
+    font-size:20px;
+    text-align: center;
+}
+.mark h4{
+    margin: 20px;
+    padding: 30px;
+    font-size: 35px;
+    color: white;
+    margin-left: 40%;
+    margin-right: 40%;
+    border-radius: 50%;
+    background: linear-gradient(to top ,#C02425 , #F0CB35 );
+    text-align: center;
+}
+@media  screen and (max-width: 750px){
+    .container{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+}
+@media  screen and (max-width: 600px){
+    .sub{
+        text-align: left;
+    }
+
+}
